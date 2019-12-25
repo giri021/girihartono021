@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Agustinus Giri Hartono : Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Agustinus Giri Hartono Portfolio">
+    <meta name="keywords" content="Giri, Docker, DevOps, Kubernetes, Portfolio">
+    <meta name="author" content="Agustinus Giri Hartono">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="VdV18sPpcIANTRmsZNFpAy9W9UUG4hUx2d4O0_QZbXo" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Giri's<span>Work</span></a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="index.html#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="index.html#skills-section" class="nav-link"><span>Skills</span></a></li>
+	          <li class="nav-item"><a href="index.html#projects-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="index.html#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="index.html#blog-section" class="nav-link"><span>Blog</span></a></li>
+	          <li class="nav-item"><a href="index.html#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  
+	  <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_12b.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+            <h1 class="mb-3 bread">My Stories</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span class="mr-2"><a href="blog.html">Blog <i class="ion-ios-arrow-forward"></i></a></span> <span>Blog Single <i class="ion-ios-arrow-forward"></i></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+		
+
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 ftco-animate">
+            <h2 class="mb-3">#1. Deploy Web Sederhana Menggunakan Docker dengan opsi -v volume</h2>
+            
+            <p>Hari ini aku mengulang kembali materi tentang docker. Aku tulis supaya aku bisa inget. Sesederhana itu motivasinya. Untuk kali ini aku akan deploy web berisi profil, portfolioku, berbasis image httpd di Dockerhub. Skenarionya adalah: </p>
+            
+            <p> 1. Syaratnya, punya akun di AWS, kemudian deploy EC2 berbasis ubuntu. Lakukan remote melalui ssh.</p>
+            <p>
+              <img src="https://miro.medium.com/max/700/1*ayx9Dnok3_P2yiWp8rJ8aw.png" alt="" class="img-fluid">
+            </p>
+            
+            <p> 2. EC2 diberi nama Giri_DevOps.</p>
+            <p> <img src="https://miro.medium.com/max/526/1*EeeFonz833NF87F1ISFmYA.png" alt="" class="img-fluid"> </p>
+            
+            <p> 3. Didalam EC2 install Docker, Docker compose,Git. Lihat gambar diatas. Silakan cari cara install Docker dan Docker Compose di github. Selain itu kita juga harus punya akun di github. </p>
+            
+            <p> 4. Langkah selanjutnya adalah melakukan pull httpd dari dockerhub: >>> docker pull httpd . Jika sudah selesai pull maka akan terlihat images ada di lokal kita. >>> docker image tag httpd:latest giri021-httpd (untuk melakukan tagging image dilokal)</p>
+            <p><img src="https://miro.medium.com/max/700/1*SfQRWkFLRIOYV_dwVcc1aw.png" alt="" class="img-fluid"> </p>
+
+            <p>5. Langkah berikutnya adalah git clone repository di github: </p> 
+            <p> <a href="https://github.com/giri021/portfolioku.git"> </a> </p>
+            <p>Repository ini isinya adalah web sederhana tanpa database. >> git clone https://github.com/giri021/portfolioku.git </p>
+            <p> Maka akan ada folder baru dengan nama portfolioku. Silakan cd ke portfolioku. </p>
+            <p><img src="https://miro.medium.com/max/604/1*y_cdkv1lT_LyIqDRxrRxsQ.png" alt="" class="img-fluid"> </p>
+            
+            
+            <p>6. Sekarang kita inspect image httpd dan kita peroleh working direktori nya. ubuntu@ip-10–21–4–xx:~$ docker image inspect giri021-httpd
+            Akan kita temukan “WorkingDir”: “/usr/local/apache2”, ini nanti akan kita mount dengan isi dari folder /home/ubuntu/portfolioku. </p> 
+            <p>Isi dari /home/ubuntu/portfolioku akan identik dengan /usr/local/apache2/htdocs </p>
+            <p>File index.html ada di /usr/local/apache2/htdocs <<<< </p>
+            
+            <p>7. Langkah selanjutnya adalah menjalankan image giri021-httpd didalam container. </p>
+            <p>ubuntu@ip-10–21–4–xx:~/portfolioku$ docker run -it -d — name giri-testing -v $PWD:/usr/local/apache2/htdocs -p 0:80 giri021-httpd </p>
+            <p><img src="https://miro.medium.com/max/700/1*U5KNo3w8JQf1Ti4DqsVddQ.png" alt="" class="img-fluid"> </p>
+
+            <p>*Catatan: -p 0:80 dapat dipahami seperti ini, -p (publish) adalah untuk menentukan port berapa yang akan digunakan/dibuka. Dengan menggunakan angka 0 adalah maka port host yang digunakan akan random. Semua traffic ke random host akan diarahkan ke port 80 di container giri021-httpd. </p>
+            
+            <p>8. Untuk memastikan bahwa isi dari /usr/local/apache2/htdocs == /home/ubuntu/portfolioku . Mari kita cek:</p>
+            <P><img src="https://miro.medium.com/max/700/1*Y_1PZ-Wb8CAYxhZ_MjCKvQ.png" alt="" class="img-fluid"></P>                
+            <P><img src="https://miro.medium.com/max/700/1*ANYwqFNIm0nXte-XBEPsyw.png" alt="" class="img-fluid"></P>                
+            
+            <p> 9. Untuk melihat hasil dari deploy web dengan basis image tadi yang kita jalankan didalam container. http://54.70.17.154:32771/</p>
+            <p><img src="https://miro.medium.com/max/700/1*Y6tZ9zNNbdC9rK7S79sfPQ.png" alt="" class="img-fluid"> </p>
+            
+            <p> 10. Akan semakin ciamik jika kita menggunakan layanan AWS yaitu route53 untuk menggunakan domain yang kita punya. Aplikasi berbasis web ini hanya bersifat sementara. Karena habis ini aku delete container yang berjalan. Uji testing saja.</p>
+
+             <div class="d-flex align-items-center mt-4 meta">
+                  <p class="mb-0"><a href="https://medium.com/@ag.giri.hartono/deploy-web-sederhana-menggunakan-docker-dengan-opsi-v-volume-e8766ee91d03">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+            </div> 
+
+            <h2 class="mb-3 mt-5">#2. Cara Custom Images di Docker</h2>
+            
+            <p>Hai semua..apa kabar? Hari ini aku nulis lagi. Ini masih ada kaitannya dengan artikel sebelumnya. Silakan dicek disini: https://medium.com/@ag.giri.hartono/deploy-web-sederhana-menggunakan-docker-dengan-opsi-v-volume-e8766ee91d03 </p>
+            <p>Kalau versi sebelumnya kita menggunakan opsi volume untuk melakukan perubahan konten dari isi web berbasis httpd. Sekaligus redundan konten web. Maka kali ini kita akan melakukan custom di image nya. </p>
+            <p>Jadi image httpd yang ini akan berisi juga konten web yang ada di github: https://github.com/giri021/portfolioku.git</p>
+            <p><img src="https://miro.medium.com/max/472/1*1-4d80cQVeAnN2TWT_EtXw.png" alt="" class="img-fluid"> </p>
+            
+            <p>1. Langkah pertama adalah memastikan ada Dockerfile di direktori portfolioku </p>
+            <p>2. Kita bekerja dalam direktori portfolioku. Disitu ada source code web apps dan Dockerfile</p>
+
+            <p><img src="https://miro.medium.com/max/528/1*XpDiG-r53-LB_LG6n2_JOg.png" alt="" class="img-fluid"> </p>
+            
+            <p>3. Isi dari Dockerfile simple saja sih, ada FROM yang isinya image official dari httpd:2.4 | versi nya pakai 2.4 . Kemudian COPY isi dari folder portfolioku ke /usr/local/apache2/htdocs/</p>
+            <p><img src="https://miro.medium.com/max/636/1*2VkhNzyjpn-ctGVp4klqcg.png" alt="" class="img-fluid"></p>
+            
+            <p>4. Proses build image sukses dengan nama image baru httpd-custom yang isinya . || Apa itu titik, titik disini adalah isi file dalam working direktori </p>
+            <p>5. Langkah selanjutnya adalah menjalankan container berbasis image custom httpd-custom tadi</p>
+            <p><img src="https://miro.medium.com/max/700/1*3t4GwPlxtzC5MMU-zAeP7g.png" alt="" class="img-fluid"> </p>
+
+            <p>6. Untuk menjalankan image didalam container, kita bisa dengan perintah: </p>
+            <p> ubuntu@ip-10–21–4–52:~/portfolioku$ docker run -it -d — name http-custom -p 0:80 httpd-custom </p>
+            <p> Dimana tag nama adalah http-custom dengan images httpd-custom dipublish lewat port 80 dimana semua traffic menuju host 0 (random port) akan diarahkan ke port 80 container httpd </p>
+            <p>7. Perhatikan pula port host yang diperoleh yaitu http://54.70.17.154:32773/ >> 32773 cukup random bukan?</p>
+            <p>8. Hasil dari deploy web berbasis image custom dapat anda lihat disini:</p>
+
+            <p><img src="https://miro.medium.com/max/700/1*FNG9aqdqFHCTgyGg1LuH7A.png" alt="" class="img-fluid"> </p>
+
+            <div class="d-flex align-items-center mt-4 meta">
+                  <p class="mb-0"><a href="https://medium.com/@ag.giri.hartono/cara-custom-images-di-docker-9d6353746b2c">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+            </div> 
+
+
+            <h2 class="mb-3 mt-5">#3. Simple Step for Tag and Push Images </h2>
+            
+            <p>I tried few steps and was able to get around to push it finally. Hope this helps someone. Here are the steps worked for me : </p>
+            <p>1) Login to the docker. Please fill password with your password in dockerhub: </p>
+            <p>docker login -u giri021</p>
+            <p>2) Tag your image build before push </p>
+            <p>your image name here is : yourlocalimage and by default it has tag : latest and my username is : giri021 as registered with docker cloud, and I created a public repository named : dockerhub </p>
+            <p>so my personal repository becomes now : giri021/dockerhub and I want to push my image with tag : myfirstimagepush </p>
+            <p>I tagged as below : </p>
+            <p>docker tag yourlocalimage:latest giri021/dockerhub:myfirstimagepush </p>
+            <p>3) Pushed the image to yourpersonal docker repository as below </p>
+            <p>docker push giri021/dockerhub:myfirstimagepush</p>
+            <p>Just wait for few second & it successfully pushed to your personal docker repo.</p>
+
+            <div class="d-flex align-items-center mt-4 meta">
+                  <p class="mb-0"><a href="https://medium.com/@ag.giri.hartono/simple-step-for-tag-and-push-images-1bdf2cca5832" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+            </div> 
+
+            <div class="tag-widget post-tag-container mb-5 mt-5">
+              <div class="tagcloud">
+                <a href="#" class="tag-cloud-link">Docker</a>
+                <a href="#" class="tag-cloud-link">Images</a>
+                <a href="#" class="tag-cloud-link">apache</a>
+                <a href="#" class="tag-cloud-link">htdocs</a>
+              </div>
+            </div>
+            
+            <div class="about-author d-flex p-4 bg-light">
+              <div class="bio mr-5">
+                <img src="images/staff-001.jpg" alt="Image placeholder" class="img-fluid mb-4">
+              </div>
+              <div class="desc">
+                <h3>Agustinus Giri Hartono</h3>
+                <p> This article is publish on Medium by Agustinus Giri Hartono.</p> 
+                <p> Honest, Hard Worker, Smart, and Deep Thinking. Good analytical thinking and innovative. Highly motivated and responsible. Extra Ordinary. God's gift. #remoteworker. in Progress as DevOps Engineer & SysOps Amazon Web Service. I have fiber optic connection for remote worker. responsibility and discipline.</p>
+                <h3>Ad Maiorem Dei Gloriam.</h3>
+              </div>
+            </div>
+
+
+          </div> <!-- .col-md-8 -->
+          <div class="col-lg-4 sidebar ftco-animate">
+            <div class="sidebar-box">
+              <form action="#" class="search-form">
+                <div class="form-group">
+                  <span class="icon icon-search"></span>
+                  <input type="text" class="form-control" placeholder="Type a keyword and hit enter">
+                </div>
+              </form>
+            </div>
+            <div class="sidebar-box ftco-animate">
+            	<h3 class="heading-sidebar">Categories</h3>
+              <ul class="categories">
+                <li><a href="#">Services <span>(12)</span></a></li>
+                <li><a href="#">Projects <span>(7)</span></a></li>
+                <li><a href="#">Blog <span>(5)</span></a></li>
+              </ul>
+            </div>
+
+            <div class="sidebar-box ftco-animate">
+              <h3 class="heading-sidebar">Recent Blog</h3>
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="#">Deploy Web Sederhana Menggunakan Docker dengan opsi -v volume</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="icon-calendar"></span> May 02, 2019</a></div>
+                    <div><a href="#"><span class="icon-person"></span> Giri</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="#">Cara Custom Images di Docker</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="icon-calendar"></span> May 02, 2019</a></div>
+                    <div><a href="#"><span class="icon-person"></span> Giri</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(images/image_3.jpg);"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="#">Simple Step for Tag and Push Images</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="icon-calendar"></span> May 02, 2019</a></div>
+                    <div><a href="#"><span class="icon-person"></span> Giri</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sidebar-box ftco-animate">
+              <h3 class="heading-sidebar">Tag Cloud</h3>
+              <div class="tagcloud">
+                <a href="#" class="tag-cloud-link">docker</a>
+                <a href="#" class="tag-cloud-link">portfolio</a>
+                <a href="#" class="tag-cloud-link">aws</a>
+                <a href="#" class="tag-cloud-link">kubernetes</a>
+                <a href="#" class="tag-cloud-link">github</a>
+                <a href="#" class="tag-cloud-link">git</a>
+                <a href="#" class="tag-cloud-link">jenkins</a>
+                <a href="#" class="tag-cloud-link">cloud</a>
+              </div>
+            </div>
+
+            <div class="sidebar-box ftco-animate">
+              <h3 class="heading-sidebar">Quote of the day</h3>
+              <p> The first rule of any technology used in a business is that automation applied to an efficient operation will magnify the efficiency. The second is that automation applied to an inefficient operation will magnify the inefficiency. Bill Gates</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section> <!-- .section -->
+		
+		
+
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Ad Maiorem Dei Gloriam</h2>               
+              <P> Agustinus Giri Hartono</P>
+              <p> Honest, Hard Worker, Smart, and Deep Thinking. Good analytical thinking and innovative. Highly motivated and responsible. Extra Ordinary. God's gift. #remoteworker. in Progress as DevOps Engineer & SysOps Amazon Web Service. I have fiber optic connection for working remotely.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="https://twitter.com/Giri021"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.facebook.com/ag.giri.hartono"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.instagram.com/giri021"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Services</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Projects</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Jl. Sambiloto RT 01 RW 15 Pojok, Harjobinangun, Pakem, Sleman, Yogyakarta</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+62 81329814888</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">ag.giri.hartono@gmail.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://giri021.github.io" target="_blank">Giri021</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
